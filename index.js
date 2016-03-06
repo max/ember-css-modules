@@ -36,6 +36,14 @@ module.exports = {
     return this.modulesPreprocessor.getModulesTree();
   },
 
+  getParentName: function() {
+    return this.belongsToAddon() ? this.parent.name : this.app.name;
+  },
+
+  getConcatOptions: function() {
+    return this.options.concat || {};
+  },
+
   getPlugins: function() {
     return this.options.plugins || [];
   },
