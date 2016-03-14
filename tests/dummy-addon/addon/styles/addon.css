@@ -1,7 +1,0 @@
-/*
- * This class is also defined in header.css, but should win here because that file
- * is forced to the top of the concatenated output.
- */
-:global .global-green-addon-class {
-  font-family: "green-from-addon-css";
-}

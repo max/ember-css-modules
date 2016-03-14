@@ -4,12 +4,7 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
-    cssModules: {
-      concat: {
-        headerFiles: ['styles/header.css'],
-        exclude: ['styles/excluded.css']
-      }
-    }
+    // Add options here
   });
 
   /*
