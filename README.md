@@ -111,14 +111,16 @@ You can also use ember-css-modules in addons that expose components to their con
 ```js
 // addon/components/my-addon-component.js
 import Ember from 'ember';
-import template from '../templates/components/my-addon-component';
-import styles from '../styles/components/my-addon-component';
+import layout from '../templates/components/my-addon-component'; // or './template' in pod format
+import styles from '../styles/components/my-addon-component';    // or './styles' in pod format
 
 export default Ember.Component.extend({
-  template,
+  layout,
   styles
 });
 ```
+
+If you're writing a [routable engine](https://github.com/dgeb/ember-engines#ember-engines-) and have route controller styles, you'll have to import the styles module and set it on your controller the same way you would with a component in the example above.
 
 ## Configuration
 
