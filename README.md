@@ -119,17 +119,17 @@ All `.css` files in your `app`/`addon` directories are automatically concatenate
 Where possible, ember-css-modules takes advantage of information it has about the dependencies between your CSS modules when making decisions about ordering. Any time, for instance, a class in one module `a` composes a class in module `b`, the contents of module `b` will be included earlier in the file output than the contents of `a`. This means you can override properties from composed classes without worrying about specificity hacks:
 
 ```css
-/* app/styles/a.css */
-.a {
+/* app/styles/b.css */
+.b {
   color: green;
   font-weight: bold;
 }
 ```
 
 ```css
-/* app/styles/b.css */
-.b {
-  composes: a from './a';
+/* app/styles/a.css */
+.a {
+  composes: b from './b';
   color: orange;
 }
 ```
